@@ -1,6 +1,8 @@
-import { showJoke, showError } from "./dom.js";
+import { showJoke, showError, showWeather } from "./dom.js";
 
-interface ApiTypes {
+const WEATHER_API_KEY = '2beaf4e1b7064d41a3484535251905'
+
+interface ApiConfig {
   url: string;
   header: Record<string, string>;
 }
@@ -11,10 +13,11 @@ export interface Report {
   date: string;
 }
 
-export const joke: ApiTypes = {
+export const joke: ApiConfig = {
   url: 'https://icanhazdadjoke.com/',
   header: { Accept: 'application/json' },
 };
+
 
 export let currentJoke: string
 
@@ -33,4 +36,16 @@ export async function getJoke(): Promise<void> {
     console.error('Error en obtenir acudit:', error);
     showError('Error en carregar l\'acudit');
   }
+}
+
+export async function getWeather(): Promise<void> {
+  const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=Barcelona&aqi=no`)
+
+  const data = await response.json();
+
+  const icon = 'https:' + data.current.condition.icon;
+  const temperature = data.current.temp_c;
+  console.log("Temps rebut:", data.current);
+
+  showWeather(icon, temperature.toString())
 }

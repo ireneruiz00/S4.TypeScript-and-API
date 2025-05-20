@@ -13,3 +13,15 @@ export function showError(message: string): void {
     jokeElement.textContent = message;
   }
 }
+
+export function showWeather(iconUrl: string, temperature: string): void {
+  const weatherElement = document.getElementById('weather');
+
+  if(weatherElement) {
+    const img = weatherElement.querySelector('img');
+    const temp = weatherElement.querySelector('.temperature');
+
+    if (img) img.src = iconUrl;
+    if (temp) temp.textContent = `| ${temperature} °C`;
+  }
+}

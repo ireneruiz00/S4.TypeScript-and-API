@@ -1,0 +1,51 @@
+$primary-color: #B08BBB;
+$secondary-color: #E6B325;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+body{
+  font-family: 'Lucida Sans'; 
+  position: relative;
+}
+
+.card{
+  border: 0;
+  border-radius: 200px;
+  background-color: #B08BBB;
+  padding: 4rem;
+  margin-top: 10rem;
+  
+  p{
+  font-size: 20px;
+  color: whitesmoke;
+  }
+
+  h2{
+  color: whitesmoke;
+  }
+
+  .score-btn {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    margin: 0.5rem;
+    cursor: pointer;
+
+  }
+
+  .btnNext {
+    margin: 1rem 30rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid black;
+    background-color: #e6b325;
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}

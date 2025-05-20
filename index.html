@@ -7,14 +7,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container-fluid">
+    <nav class="navbar container-sm">
+        <div class="align-self-start" id="weather">
             <img src="" alt="weather icon">
+            <span class="temperature"></span>
         </div>
     </nav>
-    <div class="magicpattern"></div>
-    <div class= "flex card container-xl">
-        <h2 class="text-center">Ready to laugh?</h2>
+    
+    <div class= "flex card container-xl px-5">
+        <h2 class="text-center mb-3">Ready to laugh?</h2>
         <p id="joke" class="card-text text-center">loading...</p>
         <div class="text-center">
             <button class="score-btn" data-score="1">😐</button>
