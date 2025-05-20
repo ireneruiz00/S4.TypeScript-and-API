@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="navbar container-sm">
+        <div class="align-self-start" id="weather">
+            <img src="" alt="weather icon">
+            <span class="temperature"></span>
+        </div>
+    </nav>
+    
+    <div class= "flex card container-xl px-5 text-center">
+        <h2 class="text-center mb-3">Ready to laugh?</h2>
+        <p id="joke" class="card-text text-center">loading...</p>
+        <div class="text-center">
+            <button class="score-btn" data-score="1">😐</button>
+            <button class="score-btn" data-score="2">🙂</button>
+            <button class="score-btn" data-score="3">😂</button>
+        </div>
+        <button class="btnNext">Next Joke</button>
+    </div>
+    
+    <script type="module" src="dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
