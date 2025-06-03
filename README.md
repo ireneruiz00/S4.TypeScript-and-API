@@ -28,11 +28,11 @@ To run this project locally, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/joke-weather-app.git
-   cd joke-weather-app
+   git clone https://github.com/ireneruiz00/S4.Joke-weather-app
+   cd Joke-weather-app
 Install dependencies:
 
-``bash
+    ```bash
     npm install
 
 Compile SCSS to CSS (via VS Code plugin or CLI if configured).
@@ -57,7 +57,7 @@ Push your latest changes and follow the hosting provider’s deployment guide.
 
 Example with GitHub Pages:
 
-``bash
+```bash
     npm run build
     git add dist
     git commit -m "Build for deploy"
